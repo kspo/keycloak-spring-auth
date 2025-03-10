@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: keycloakauth
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "http://localhost:9090/realms/demo-realm"
+          jwk-set-uri: "http://localhost:9090/realms/demo-realm/protocol/openid-connect/certs"
+
+keycloak:
+  auth-server-url: http://localhost:9090
+  realm: demo-realm
+  ssl-required: none
+  resource: api-backend
+  credentials:
+    secret: sihkrf4G8y7QBB6fykEydMCHymBaQ8cv
+  bearer-only: true
+  use-resource-role-mappings: true
